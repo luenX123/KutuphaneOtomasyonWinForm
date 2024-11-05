@@ -108,5 +108,12 @@ namespace KutuphaneOtomasyonWinForm
             kEkle.MdiParent = this;
             kEkle.Show();
         }
+
+        private void kitapSilbtn_Click(object sender, EventArgs e)
+        {
+            KitapSil kSil = new KitapSil();
+            kSil.MdiParent = this;
+            kSil.Show();
+        }
     }
 }
