@@ -34,14 +34,14 @@ namespace KutuphaneOtomasyonWinForm.kullanici
         {
             kullaniciAdTxt.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             kullaniciSoyadTxt.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            kullaniciMailTxt.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            kullaniciMailTxt.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
             kullaniciTCTxt.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             kullaniciTelTxt.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            kullaniciCezaTxt.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            kullaniciCezaTxt.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
 
 
 
-            if (dataGridView1.CurrentRow.Cells[7].Value.ToString().Equals("E"))
+            if (dataGridView1.CurrentRow.Cells[6].Value.ToString().Equals("E"))
             {
                 radioButton1.Checked = true;
             }

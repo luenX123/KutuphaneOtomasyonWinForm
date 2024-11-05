@@ -5,6 +5,18 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="kutuphaneOtomasyonuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="kitaplarr">
+          <Key>
+            <PropertyRef Name="kitap_id" />
+          </Key>
+          <Property Name="kitap_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kitap_ad" Type="nvarchar" MaxLength="50" />
+          <Property Name="kitap_yazar" Type="nvarchar" MaxLength="50" />
+          <Property Name="kitap_yayinevi" Type="nvarchar" MaxLength="50" />
+          <Property Name="kitap_basimtarihi" Type="datetime" />
+          <Property Name="kitap_sayfasayisi" Type="int" />
+          <Property Name="kitap_turu" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="kullanicilar">
           <Key>
             <PropertyRef Name="kullanici_id" />
@@ -32,6 +44,7 @@
           <Property Name="personel_Sifre" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="kutuphaneOtomasyonuModelStoreContainer">
+          <EntitySet Name="kitaplarr" EntityType="Self.kitaplarr" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="kullanicilar" EntityType="Self.kullanicilar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="personeller" EntityType="Self.personeller" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -55,6 +68,7 @@
         <EntityContainer Name="kutuphaneOtomasyonuEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="personeller" EntityType="Self.personeller" />
           <EntitySet Name="kullanicilar" EntityType="kutuphaneOtomasyonuModel.kullanicilar" />
+          <EntitySet Name="kitaplarr" EntityType="kutuphaneOtomasyonuModel.kitaplarr" />
         </EntityContainer>
         <EntityType Name="kullanicilar">
           <Key>
@@ -68,6 +82,18 @@
           <Property Name="kullanici_ceza" Type="Double" />
           <Property Name="kullanici_cinsiyet" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="kullanici_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="kitaplarr">
+          <Key>
+            <PropertyRef Name="kitap_id" />
+          </Key>
+          <Property Name="kitap_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kitap_ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kitap_yazar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kitap_yayinevi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kitap_basimtarihi" Type="DateTime" Precision="3" />
+          <Property Name="kitap_sayfasayisi" Type="Int32" />
+          <Property Name="kitap_turu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -100,6 +126,19 @@
                 <ScalarProperty Name="kullanici_soyad" ColumnName="kullanici_soyad" />
                 <ScalarProperty Name="kullanici_ad" ColumnName="kullanici_ad" />
                 <ScalarProperty Name="kullanici_id" ColumnName="kullanici_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kitaplarr">
+            <EntityTypeMapping TypeName="kutuphaneOtomasyonuModel.kitaplarr">
+              <MappingFragment StoreEntitySet="kitaplarr">
+                <ScalarProperty Name="kitap_turu" ColumnName="kitap_turu" />
+                <ScalarProperty Name="kitap_sayfasayisi" ColumnName="kitap_sayfasayisi" />
+                <ScalarProperty Name="kitap_basimtarihi" ColumnName="kitap_basimtarihi" />
+                <ScalarProperty Name="kitap_yayinevi" ColumnName="kitap_yayinevi" />
+                <ScalarProperty Name="kitap_yazar" ColumnName="kitap_yazar" />
+                <ScalarProperty Name="kitap_ad" ColumnName="kitap_ad" />
+                <ScalarProperty Name="kitap_id" ColumnName="kitap_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

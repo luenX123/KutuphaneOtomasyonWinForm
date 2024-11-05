@@ -35,12 +35,20 @@
             this.ekleKullanicibtn = new System.Windows.Forms.Button();
             this.Kullanicibtn = new System.Windows.Forms.Button();
             this.kullaniciBilgiPanel = new System.Windows.Forms.Panel();
+            this.kitapbtn = new System.Windows.Forms.Button();
+            this.kitapEkleBtn = new System.Windows.Forms.Button();
+            this.kitapGuncellebtn = new System.Windows.Forms.Button();
+            this.kitapSilbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Controls.Add(this.kitapSilbtn);
+            this.panel1.Controls.Add(this.kitapGuncellebtn);
+            this.panel1.Controls.Add(this.kitapEkleBtn);
+            this.panel1.Controls.Add(this.kitapbtn);
             this.panel1.Controls.Add(this.silKullanicibtn);
             this.panel1.Controls.Add(this.guncelleKullanicibtn);
             this.panel1.Controls.Add(this.ekleKullanicibtn);
@@ -101,6 +109,7 @@
             // 
             // Kullanicibtn
             // 
+            this.Kullanicibtn.BackColor = System.Drawing.SystemColors.HotTrack;
             this.Kullanicibtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.Kullanicibtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Kullanicibtn.Font = new System.Drawing.Font("Arial Narrow", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -112,7 +121,7 @@
             this.Kullanicibtn.TabIndex = 2;
             this.Kullanicibtn.Text = "      Kullanıcılar";
             this.Kullanicibtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Kullanicibtn.UseVisualStyleBackColor = true;
+            this.Kullanicibtn.UseVisualStyleBackColor = false;
             this.Kullanicibtn.Click += new System.EventHandler(this.Kullanicibtn_Click);
             // 
             // kullaniciBilgiPanel
@@ -123,6 +132,69 @@
             this.kullaniciBilgiPanel.Name = "kullaniciBilgiPanel";
             this.kullaniciBilgiPanel.Size = new System.Drawing.Size(921, 48);
             this.kullaniciBilgiPanel.TabIndex = 1;
+            // 
+            // kitapbtn
+            // 
+            this.kitapbtn.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.kitapbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kitapbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kitapbtn.Font = new System.Drawing.Font("Arial Narrow", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kitapbtn.Image = ((System.Drawing.Image)(resources.GetObject("kitapbtn.Image")));
+            this.kitapbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.kitapbtn.Location = new System.Drawing.Point(0, 304);
+            this.kitapbtn.Name = "kitapbtn";
+            this.kitapbtn.Size = new System.Drawing.Size(198, 76);
+            this.kitapbtn.TabIndex = 6;
+            this.kitapbtn.Text = "      Kitaplar";
+            this.kitapbtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.kitapbtn.UseVisualStyleBackColor = false;
+            this.kitapbtn.Click += new System.EventHandler(this.kitapbtn_Click);
+            // 
+            // kitapEkleBtn
+            // 
+            this.kitapEkleBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kitapEkleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kitapEkleBtn.Font = new System.Drawing.Font("Arial Narrow", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kitapEkleBtn.Image = ((System.Drawing.Image)(resources.GetObject("kitapEkleBtn.Image")));
+            this.kitapEkleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.kitapEkleBtn.Location = new System.Drawing.Point(0, 380);
+            this.kitapEkleBtn.Name = "kitapEkleBtn";
+            this.kitapEkleBtn.Size = new System.Drawing.Size(198, 76);
+            this.kitapEkleBtn.TabIndex = 7;
+            this.kitapEkleBtn.Text = "Kitap Ekle";
+            this.kitapEkleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.kitapEkleBtn.UseVisualStyleBackColor = true;
+            this.kitapEkleBtn.Click += new System.EventHandler(this.kitapEkleBtn_Click);
+            // 
+            // kitapGuncellebtn
+            // 
+            this.kitapGuncellebtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kitapGuncellebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kitapGuncellebtn.Font = new System.Drawing.Font("Arial Narrow", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kitapGuncellebtn.Image = ((System.Drawing.Image)(resources.GetObject("kitapGuncellebtn.Image")));
+            this.kitapGuncellebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.kitapGuncellebtn.Location = new System.Drawing.Point(0, 456);
+            this.kitapGuncellebtn.Name = "kitapGuncellebtn";
+            this.kitapGuncellebtn.Size = new System.Drawing.Size(198, 76);
+            this.kitapGuncellebtn.TabIndex = 8;
+            this.kitapGuncellebtn.Text = "Kitap Gün.";
+            this.kitapGuncellebtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.kitapGuncellebtn.UseVisualStyleBackColor = true;
+            // 
+            // kitapSilbtn
+            // 
+            this.kitapSilbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kitapSilbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kitapSilbtn.Font = new System.Drawing.Font("Arial Narrow", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kitapSilbtn.Image = ((System.Drawing.Image)(resources.GetObject("kitapSilbtn.Image")));
+            this.kitapSilbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.kitapSilbtn.Location = new System.Drawing.Point(0, 532);
+            this.kitapSilbtn.Name = "kitapSilbtn";
+            this.kitapSilbtn.Size = new System.Drawing.Size(198, 76);
+            this.kitapSilbtn.TabIndex = 9;
+            this.kitapSilbtn.Text = "Kitap Sil";
+            this.kitapSilbtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.kitapSilbtn.UseVisualStyleBackColor = true;
             // 
             // adminpanel
             // 
@@ -148,5 +220,9 @@
         private System.Windows.Forms.Button silKullanicibtn;
         private System.Windows.Forms.Button guncelleKullanicibtn;
         private System.Windows.Forms.Button ekleKullanicibtn;
+        private System.Windows.Forms.Button kitapSilbtn;
+        private System.Windows.Forms.Button kitapGuncellebtn;
+        private System.Windows.Forms.Button kitapEkleBtn;
+        private System.Windows.Forms.Button kitapbtn;
     }
 }

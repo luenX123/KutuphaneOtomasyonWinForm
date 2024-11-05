@@ -1,4 +1,5 @@
-﻿using KutuphaneOtomasyonWinForm.kullanici;
+﻿using KutuphaneOtomasyonWinForm.kitaplar;
+using KutuphaneOtomasyonWinForm.kullanici;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,9 +23,15 @@ namespace KutuphaneOtomasyonWinForm
         kutuphaneOtomasyonuEntities db=new kutuphaneOtomasyonuEntities();
         private void adminpanel_Load(object sender, EventArgs e)
         {
+            //kullanıcı butonları girişte kapalı (ekle-güncelle-sil)
             ekleKullanicibtn.Visible = false;
             guncelleKullanicibtn.Visible=false;
             silKullanicibtn.Visible=false;
+
+            //kitaplar butonları girişte kapalı.
+            kitapEkleBtn.Visible=false;
+            kitapGuncellebtn.Visible=false;
+            kitapSilbtn.Visible=false;
             
         }
 
@@ -73,6 +80,33 @@ namespace KutuphaneOtomasyonWinForm
             KullaniciGuncelle kGuncelle = new KullaniciGuncelle();
             kGuncelle.MdiParent = this;
             kGuncelle.Show();
+        }
+
+        private void kitapbtn_Click(object sender, EventArgs e)
+        {
+            if (kitapEkleBtn.Visible == false)
+            {
+                kitapEkleBtn.Visible = true;
+                kitapGuncellebtn.Visible = true;
+                kitapSilbtn.Visible = true;
+            }
+            else
+            {
+                kitapEkleBtn.Visible= false;
+                kitapGuncellebtn.Visible= false;
+                kitapSilbtn.Visible= false;
+            }
+
+            kitapliste kliste = new kitapliste();
+            kliste.MdiParent=this;
+            kliste.Show();
+        }
+
+        private void kitapEkleBtn_Click(object sender, EventArgs e)
+        {
+            kitaplarEkle kEkle = new kitaplarEkle();
+            kEkle.MdiParent = this;
+            kEkle.Show();
         }
     }
 }
