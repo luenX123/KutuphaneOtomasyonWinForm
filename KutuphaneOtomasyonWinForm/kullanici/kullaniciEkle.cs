@@ -55,6 +55,7 @@ namespace KutuphaneOtomasyonWinForm.kullanici
             kutuphaneOtomasyonuEntities db = new kutuphaneOtomasyonuEntities();
             var kullanicilar = db.kullanicilar.ToList();
             dataGridView1.DataSource = kullanicilar.ToList();
+            
         }
         private void kullaniciEkle_Load(object sender, EventArgs e)
         {

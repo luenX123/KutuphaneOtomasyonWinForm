@@ -100,6 +100,12 @@
     <Compile Include="kullanicilar.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="kullanici\KullaniciGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kullanici\KullaniciGuncelle.Designer.cs">
+      <DependentUpon>KullaniciGuncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="kullanici\KullaniciSil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="kullanici\KullaniciFormListe.resx">
       <DependentUpon>KullaniciFormListe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kullanici\KullaniciGuncelle.resx">
+      <DependentUpon>KullaniciGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kullanici\KullaniciSil.resx">
       <DependentUpon>KullaniciSil.cs</DependentUpon>

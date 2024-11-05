@@ -98,9 +98,9 @@
             this.kullaniciCinsiyetRadiobtn.AutoSize = true;
             this.kullaniciCinsiyetRadiobtn.Location = new System.Drawing.Point(31, 98);
             this.kullaniciCinsiyetRadiobtn.Name = "kullaniciCinsiyetRadiobtn";
-            this.kullaniciCinsiyetRadiobtn.Size = new System.Drawing.Size(50, 13);
+            this.kullaniciCinsiyetRadiobtn.Size = new System.Drawing.Size(10, 13);
             this.kullaniciCinsiyetRadiobtn.TabIndex = 5;
-            this.kullaniciCinsiyetRadiobtn.Text = "SOYAD :";
+            this.kullaniciCinsiyetRadiobtn.Text = " ";
             // 
             // kullaniciAdTxt
             // 
