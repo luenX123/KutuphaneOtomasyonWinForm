@@ -116,15 +116,17 @@
             // 
             // btnExit
             // 
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExit.Location = new System.Drawing.Point(256, 7);
+            this.btnExit.Location = new System.Drawing.Point(257, 7);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(33, 29);
+            this.btnExit.Size = new System.Drawing.Size(32, 28);
             this.btnExit.TabIndex = 8;
-            this.btnExit.Text = "button1";
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Text = "   X";
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Form1

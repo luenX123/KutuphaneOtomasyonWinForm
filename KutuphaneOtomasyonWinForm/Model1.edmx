@@ -14,8 +14,9 @@
           <Property Name="kullanici_soyad" Type="nvarchar" MaxLength="50" />
           <Property Name="kullanici_tc" Type="nvarchar" MaxLength="11" />
           <Property Name="kullanici_tel" Type="nvarchar" MaxLength="11" />
-          <Property Name="kullanıcı_mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="kullanici_mail" Type="nvarchar" MaxLength="50" />
           <Property Name="kullanici_ceza" Type="float" />
+          <Property Name="kullanici_cinsiyet" Type="nvarchar" MaxLength="1" />
         </EntityType>
         <EntityType Name="personeller">
           <Key>
@@ -64,8 +65,9 @@
           <Property Name="kullanici_soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="kullanici_tc" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
           <Property Name="kullanici_tel" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
-          <Property Name="kullanıcı_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="kullanici_ceza" Type="Double" />
+          <Property Name="kullanici_cinsiyet" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="kullanici_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -90,8 +92,9 @@
           <EntitySetMapping Name="kullanicilar">
             <EntityTypeMapping TypeName="kutuphaneOtomasyonuModel.kullanicilar">
               <MappingFragment StoreEntitySet="kullanicilar">
+                <ScalarProperty Name="kullanici_mail" ColumnName="kullanici_mail" />
+                <ScalarProperty Name="kullanici_cinsiyet" ColumnName="kullanici_cinsiyet" />
                 <ScalarProperty Name="kullanici_ceza" ColumnName="kullanici_ceza" />
-                <ScalarProperty Name="kullanıcı_mail" ColumnName="kullanıcı_mail" />
                 <ScalarProperty Name="kullanici_tel" ColumnName="kullanici_tel" />
                 <ScalarProperty Name="kullanici_tc" ColumnName="kullanici_tc" />
                 <ScalarProperty Name="kullanici_soyad" ColumnName="kullanici_soyad" />

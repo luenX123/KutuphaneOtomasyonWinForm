@@ -65,6 +65,7 @@
             this.silKullanicibtn.Text = "K.Sil";
             this.silKullanicibtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.silKullanicibtn.UseVisualStyleBackColor = true;
+            this.silKullanicibtn.Click += new System.EventHandler(this.silKullanicibtn_Click);
             // 
             // guncelleKullanicibtn
             // 
@@ -95,6 +96,7 @@
             this.ekleKullanicibtn.Text = "K.Ekle";
             this.ekleKullanicibtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ekleKullanicibtn.UseVisualStyleBackColor = true;
+            this.ekleKullanicibtn.Click += new System.EventHandler(this.ekleKullanicibtn_Click);
             // 
             // Kullanicibtn
             // 
