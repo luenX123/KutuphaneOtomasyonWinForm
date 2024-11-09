@@ -75,5 +75,48 @@ namespace KutuphaneOtomasyonWinForm.kayit
             var bulunanKitaplar=db.kitaplarr.Where(x =>x.kitap_ad.Contains(gelenAD)).ToList();
             dataGridView2.DataSource= bulunanKitaplar.ToList();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //kişiyi aldık
+            string secilenKisiTC = TcBultxt.Text;
+            var secilenKisi=db.kullanicilar.Where(x =>x.kullanici_tc.Equals(secilenKisiTC)).FirstOrDefault();
+
+
+            //kitabı aldık
+            int secilenKitapId = Convert.ToInt32(dataGridView2.CurrentRow.Cells[0].Value);
+            var secilenKitap = db.kitaplarr.Where(x => x.kitap_id == secilenKitapId).FirstOrDefault();
+
+            if (secilenKitap != null)
+            {
+                label4.Text = $"{secilenKitap.kitap_ad} - Kitap'ı Ödünç Verildi!";// $ işareti C# dilinde string interpolasyonu yapmak için kullanılır.değişken veya ifade yazarak onları metne ekler
+            }
+            else
+            {
+                label4.Text = "Kitap bulunamadı.";
+            }
+
+
+            kayitlar yeniKayit =new kayitlar();
+            yeniKayit.kitap_id = secilenKitap.kitap_id;
+            yeniKayit.kullanici_id = secilenKisi.kullanici_id;
+            yeniKayit.alis_tarih = DateTime.Today;
+            yeniKayit.son_tarih = DateTime.Today.AddDays(30);
+            yeniKayit.kayit_durum =false;
+            db.kayitlar.Add(yeniKayit);
+            db.SaveChanges();
+            
+            Liste();//yeniden akyıtlar listesini düzenle
+
+
+
+
+
+        }
+
+        private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
     }
 }

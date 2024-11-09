@@ -40,12 +40,14 @@
             this.ekleKullanicibtn = new System.Windows.Forms.Button();
             this.Kullanicibtn = new System.Windows.Forms.Button();
             this.kullaniciBilgiPanel = new System.Windows.Forms.Panel();
+            this.GeriAlBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Controls.Add(this.GeriAlBtn);
             this.panel1.Controls.Add(this.oduncVerbtn);
             this.panel1.Controls.Add(this.kitapSilbtn);
             this.panel1.Controls.Add(this.kitapGuncellebtn);
@@ -217,6 +219,23 @@
             this.kullaniciBilgiPanel.Size = new System.Drawing.Size(921, 48);
             this.kullaniciBilgiPanel.TabIndex = 1;
             // 
+            // GeriAlBtn
+            // 
+            this.GeriAlBtn.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.GeriAlBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.GeriAlBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GeriAlBtn.Font = new System.Drawing.Font("Arial Narrow", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.GeriAlBtn.Image = ((System.Drawing.Image)(resources.GetObject("GeriAlBtn.Image")));
+            this.GeriAlBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GeriAlBtn.Location = new System.Drawing.Point(0, 568);
+            this.GeriAlBtn.Name = "GeriAlBtn";
+            this.GeriAlBtn.Size = new System.Drawing.Size(198, 51);
+            this.GeriAlBtn.TabIndex = 11;
+            this.GeriAlBtn.Text = "      Geri Al";
+            this.GeriAlBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.GeriAlBtn.UseVisualStyleBackColor = false;
+            this.GeriAlBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
             // adminpanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,5 +265,6 @@
         private System.Windows.Forms.Button kitapEkleBtn;
         private System.Windows.Forms.Button kitapbtn;
         private System.Windows.Forms.Button oduncVerbtn;
+        private System.Windows.Forms.Button GeriAlBtn;
     }
 }
