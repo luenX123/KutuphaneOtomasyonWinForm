@@ -1,4 +1,5 @@
-﻿using KutuphaneOtomasyonWinForm.kitaplar;
+﻿using KutuphaneOtomasyonWinForm.kayit;
+using KutuphaneOtomasyonWinForm.kitaplar;
 using KutuphaneOtomasyonWinForm.kullanici;
 using System;
 using System.Collections.Generic;
@@ -114,6 +115,21 @@ namespace KutuphaneOtomasyonWinForm
             KitapSil kSil = new KitapSil();
             kSil.MdiParent = this;
             kSil.Show();
+        }
+
+        private void kitapGuncellebtn_Click(object sender, EventArgs e)
+        {
+            KitapGuncelle kGuncel = new KitapGuncelle();
+            kGuncel.MdiParent=this;
+            kGuncel.Show();
+            
+        }
+
+        private void oduncVerbtn_Click(object sender, EventArgs e)
+        {
+            oduncVer oduncVer = new oduncVer();
+            oduncVer.MdiParent = this;
+            oduncVer.Show();
         }
     }
 }

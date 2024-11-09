@@ -14,6 +14,12 @@ namespace KutuphaneOtomasyonWinForm
     
     public partial class kitaplarr
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public kitaplarr()
+        {
+            this.kayitlar = new HashSet<kayitlar>();
+        }
+    
         public int kitap_id { get; set; }
         public string kitap_ad { get; set; }
         public string kitap_yazar { get; set; }
@@ -21,5 +27,8 @@ namespace KutuphaneOtomasyonWinForm
         public Nullable<System.DateTime> kitap_basimtarihi { get; set; }
         public Nullable<int> kitap_sayfasayisi { get; set; }
         public string kitap_turu { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<kayitlar> kayitlar { get; set; }
     }
 }

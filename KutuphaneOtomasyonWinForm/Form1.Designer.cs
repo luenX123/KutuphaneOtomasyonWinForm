@@ -99,7 +99,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(82, 7);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(141, 111);
+            this.pictureBox1.Size = new System.Drawing.Size(148, 125);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -108,24 +108,28 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(40, 121);
+            this.label4.Location = new System.Drawing.Point(75, 135);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(233, 37);
+            this.label4.Size = new System.Drawing.Size(155, 37);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Hoşgeldin, Admin!";
+            this.label4.Text = "Hoşgeldiniz";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExit.Location = new System.Drawing.Point(257, 7);
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(256, 7);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(32, 28);
+            this.btnExit.Size = new System.Drawing.Size(33, 27);
             this.btnExit.TabIndex = 8;
-            this.btnExit.Text = "   X";
+            this.btnExit.Text = " ";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -134,7 +138,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
-            this.ClientSize = new System.Drawing.Size(301, 529);
+            this.ClientSize = new System.Drawing.Size(291, 495);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);

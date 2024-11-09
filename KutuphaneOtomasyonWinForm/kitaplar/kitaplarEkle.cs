@@ -18,9 +18,29 @@ namespace KutuphaneOtomasyonWinForm.kitaplar
         }
 
         kutuphaneOtomasyonuEntities db=new kutuphaneOtomasyonuEntities();
+
+
+        public void Liste()//method oluşturma
+        {
+            kutuphaneOtomasyonuEntities db = new kutuphaneOtomasyonuEntities();
+            var kitaplar = db.kitaplarr.ToList();
+            dataGridView1.DataSource = kitaplar.ToList();
+
+
+            dataGridView1.Columns[7].Visible = false;
+            //
+            dataGridView1.Columns[1].HeaderText = "Kitap Adı";
+            dataGridView1.Columns[2].HeaderText = "Yazar";
+            dataGridView1.Columns[3].HeaderText = "Yayınevi";
+            dataGridView1.Columns[4].HeaderText = "Kitap Basım Tarihi";
+            dataGridView1.Columns[5].HeaderText = "Kitap Sayfası";
+            dataGridView1.Columns[6].HeaderText = "Kitap Türü";
+
+        }
+
         private void kitaplarEkle_Load(object sender, EventArgs e)
         {
-
+            Liste();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -34,16 +54,15 @@ namespace KutuphaneOtomasyonWinForm.kitaplar
             kitaplarr.kitap_ad =adKitaptxt.Text; 
             kitaplarr.kitap_yazar =yazarKitaptxt.Text;
             kitaplarr.kitap_yayinevi=yayineviKitaptxt.Text;
-            kitaplarr.kitap_sayfasayisi = Convert.ToInt16(numericUpDown1.Value);
+            kitaplarr.kitap_sayfasayisi = Convert.ToInt16(sayfaKitapNumeric.Value);
             kitaplarr.kitap_basimtarihi =tarihKitapDTP.Value;
             kitaplarr.kitap_turu=turKitaptxt.Text;
 
             db.kitaplarr.Add(kitaplarr);
             db.SaveChanges();
+            Liste();
 
-
-            var kliste= db.kitaplarr.ToList();
-            dataGridView1.DataSource = kliste.ToList();
+            
 
 
         }

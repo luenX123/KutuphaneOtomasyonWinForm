@@ -17,10 +17,26 @@ namespace KutuphaneOtomasyonWinForm.kitaplar
             InitializeComponent();
         }
         kutuphaneOtomasyonuEntities db =new kutuphaneOtomasyonuEntities();
+
+        public void Liste()//method oluşturma
+        {
+            kutuphaneOtomasyonuEntities db = new kutuphaneOtomasyonuEntities();
+            var kitaplar = db.kitaplarr.ToList();
+            dataGridView1.DataSource = kitaplar.ToList();
+
+            dataGridView1.Columns[7].Visible = false;
+
+            dataGridView1.Columns[1].HeaderText = "Kitap Adı";
+            dataGridView1.Columns[2].HeaderText = "Yazar";
+            dataGridView1.Columns[3].HeaderText = "Yayınevi";
+            dataGridView1.Columns[4].HeaderText = "Kitap Basım Tarihi";
+            dataGridView1.Columns[5].HeaderText = "Kitap Sayfası";
+            dataGridView1.Columns[6].HeaderText = "Kitap Türü";
+
+        }
         private void KitapSil_Load(object sender, EventArgs e)
         {
-            var kaynaklar = db.kitaplarr.ToList ();
-            dataGridView1.DataSource = kaynaklar.ToList ();
+            Liste();
 
         }
 
@@ -30,10 +46,9 @@ namespace KutuphaneOtomasyonWinForm.kitaplar
             var silinenKitaplar=db.kitaplarr.Where(x =>x.kitap_id == secilenID).FirstOrDefault();
             db.kitaplarr.Remove(silinenKitaplar);
             db.SaveChanges();
+            Liste();
 
-
-            var kaynaklar = db.kitaplarr.ToList();
-            dataGridView1.DataSource = kaynaklar.ToList();
+            
 
         }
     }

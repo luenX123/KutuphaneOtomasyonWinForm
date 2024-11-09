@@ -28,5 +28,7 @@ namespace KutuphaneOtomasyonWinForm
         public virtual DbSet<personeller> personeller { get; set; }
         public virtual DbSet<kullanicilar> kullanicilar { get; set; }
         public virtual DbSet<kitaplarr> kitaplarr { get; set; }
+        public virtual DbSet<kayitlar> kayitlar { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

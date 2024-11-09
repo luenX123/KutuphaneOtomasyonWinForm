@@ -85,8 +85,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="kayitlar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="kayit\oduncVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kayit\oduncVer.Designer.cs">
+      <DependentUpon>oduncVer.cs</DependentUpon>
+    </Compile>
     <Compile Include="kitaplarr.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="kitaplar\KitapGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kitaplar\KitapGuncelle.Designer.cs">
+      <DependentUpon>KitapGuncelle.cs</DependentUpon>
     </Compile>
     <Compile Include="kitaplar\kitaplarEkle.cs">
       <SubType>Form</SubType>
@@ -153,11 +168,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="adminpanel.resx">
       <DependentUpon>adminpanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kayit\oduncVer.resx">
+      <DependentUpon>oduncVer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kitaplar\KitapGuncelle.resx">
+      <DependentUpon>KitapGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kitaplar\kitaplarEkle.resx">
       <DependentUpon>kitaplarEkle.cs</DependentUpon>

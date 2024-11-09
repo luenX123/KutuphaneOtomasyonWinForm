@@ -32,18 +32,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
-            this.sayfaKitapNumeric = new System.Windows.Forms.Label();
+            this.lbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.adKitaptxt = new System.Windows.Forms.TextBox();
             this.yazarKitaptxt = new System.Windows.Forms.TextBox();
             this.yayineviKitaptxt = new System.Windows.Forms.TextBox();
             this.turKitaptxt = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.sayfaKitapNumeric = new System.Windows.Forms.NumericUpDown();
             this.tarihKitapDTP = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sayfaKitapNumeric)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -82,14 +82,14 @@
             this.label.TabIndex = 3;
             this.label.Text = "Yayınevi :";
             // 
-            // sayfaKitapNumeric
+            // lbl
             // 
-            this.sayfaKitapNumeric.AutoSize = true;
-            this.sayfaKitapNumeric.Location = new System.Drawing.Point(9, 173);
-            this.sayfaKitapNumeric.Name = "sayfaKitapNumeric";
-            this.sayfaKitapNumeric.Size = new System.Drawing.Size(70, 13);
-            this.sayfaKitapNumeric.TabIndex = 4;
-            this.sayfaKitapNumeric.Text = "Sayfa Sayısı :";
+            this.lbl.AutoSize = true;
+            this.lbl.Location = new System.Drawing.Point(9, 173);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(70, 13);
+            this.lbl.TabIndex = 4;
+            this.lbl.Text = "Sayfa Sayısı :";
             // 
             // label5
             // 
@@ -137,12 +137,12 @@
             this.turKitaptxt.Size = new System.Drawing.Size(164, 20);
             this.turKitaptxt.TabIndex = 12;
             // 
-            // numericUpDown1
+            // sayfaKitapNumeric
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(85, 166);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(161, 20);
-            this.numericUpDown1.TabIndex = 13;
+            this.sayfaKitapNumeric.Location = new System.Drawing.Point(85, 166);
+            this.sayfaKitapNumeric.Name = "sayfaKitapNumeric";
+            this.sayfaKitapNumeric.Size = new System.Drawing.Size(161, 20);
+            this.sayfaKitapNumeric.TabIndex = 13;
             // 
             // tarihKitapDTP
             // 
@@ -169,14 +169,14 @@
             this.ClientSize = new System.Drawing.Size(1075, 619);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tarihKitapDTP);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.sayfaKitapNumeric);
             this.Controls.Add(this.turKitaptxt);
             this.Controls.Add(this.yayineviKitaptxt);
             this.Controls.Add(this.yazarKitaptxt);
             this.Controls.Add(this.adKitaptxt);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.sayfaKitapNumeric);
+            this.Controls.Add(this.lbl);
             this.Controls.Add(this.label);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -185,7 +185,7 @@
             this.Text = "kitaplarEkle";
             this.Load += new System.EventHandler(this.kitaplarEkle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sayfaKitapNumeric)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,14 +197,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label;
-        private System.Windows.Forms.Label sayfaKitapNumeric;
+        private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox adKitaptxt;
         private System.Windows.Forms.TextBox yazarKitaptxt;
         private System.Windows.Forms.TextBox yayineviKitaptxt;
         private System.Windows.Forms.TextBox turKitaptxt;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown sayfaKitapNumeric;
         private System.Windows.Forms.DateTimePicker tarihKitapDTP;
         private System.Windows.Forms.Button button1;
     }
