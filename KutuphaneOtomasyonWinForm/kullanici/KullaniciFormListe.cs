@@ -24,7 +24,8 @@ namespace KutuphaneOtomasyonWinForm
             dataGridView1.DataSource = kullanicilar.ToList();
 
             dataGridView1.Columns[8].Visible = false;
-
+           
+         
 
             dataGridView1.Columns[1].HeaderText = "Kullanıcı Ad";
             dataGridView1.Columns[2].HeaderText = "Kullanıcı Soyad";

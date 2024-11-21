@@ -28,6 +28,7 @@ namespace KutuphaneOtomasyonWinForm
         public Nullable<double> kullanici_ceza { get; set; }
         public string kullanici_cinsiyet { get; set; }
         public string kullanici_mail { get; set; }
+        public string kullanici_adres { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<kayitlar> kayitlar { get; set; }

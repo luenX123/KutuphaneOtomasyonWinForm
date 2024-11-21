@@ -42,13 +42,29 @@ namespace KutuphaneOtomasyonWinForm.kitaplar
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int secilenID = Convert.ToInt16( dataGridView1.CurrentRow.Cells [0].Value);
-            var silinenKitaplar=db.kitaplarr.Where(x =>x.kitap_id == secilenID).FirstOrDefault();
-            db.kitaplarr.Remove(silinenKitaplar);
-            db.SaveChanges();
-            Liste();
-
             
+            if (dataGridView1.CurrentRow != null)
+            {               
+                int secilenID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                var silinenKitap = db.kitaplarr.FirstOrDefault(x => x.kitap_id == secilenID);
 
+                if (silinenKitap != null)
+                {
+                    db.kitaplarr.Remove(silinenKitap);
+                    db.SaveChanges();
+                    Liste();
+                    MessageBox.Show("Kitap başarıyla silindi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Silmek için geçerli bir kitap bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen silmek istediğiniz satırı seçin.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
+
     }
+}

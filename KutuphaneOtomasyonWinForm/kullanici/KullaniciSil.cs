@@ -20,7 +20,7 @@ namespace KutuphaneOtomasyonWinForm.kullanici
 
         public void Liste()//method oluşturma
         {
-            kutuphaneOtomasyonuEntities db = new kutuphaneOtomasyonuEntities();
+            
             var kullanicilar = db.kullanicilar.ToList();
             dataGridView1.DataSource = kullanicilar.ToList();
 
@@ -43,11 +43,33 @@ namespace KutuphaneOtomasyonWinForm.kullanici
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int secilenID=Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value);//hangi satırdaysak onun seçmini yapar.
-            var kullanici=db.kullanicilar.Where(x =>x.kullanici_id==secilenID).FirstOrDefault();
-            db.kullanicilar.Remove(kullanici);
-            db.SaveChanges();
-            Liste();
+            
+            if (dataGridView1.CurrentRow != null)
+            {
+                
+                int secilenID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+
+                
+                var kullanici = db.kullanicilar.FirstOrDefault(x => x.kullanici_id == secilenID);
+
+                
+                if (kullanici != null)
+                {                   
+                    db.kullanicilar.Remove(kullanici);
+                    db.SaveChanges();                   
+                    Liste();             
+                    MessageBox.Show("Kullanıcı başarıyla silindi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Kullanıcı bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {               
+                MessageBox.Show("Lütfen silmek istediğiniz satırı seçin.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
+
     }
 }

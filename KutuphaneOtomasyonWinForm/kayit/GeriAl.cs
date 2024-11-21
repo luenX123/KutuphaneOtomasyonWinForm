@@ -20,8 +20,13 @@ namespace KutuphaneOtomasyonWinForm.kayit
 
         public void KayitDurumliste()
         {
-            var kayitlar=db.kayitlar.Where(x =>x.kayit_durum ==false).ToList();
+            
+            
+            var kayitlar = db.kayitlar.Where(x => x.kayit_durum == false).ToList();
             dataGridView1.DataSource = kayitlar.ToList();
+
+            
+            
 
             dataGridView1.Columns[6].Visible = false;
             dataGridView1.Columns[7].Visible = false;

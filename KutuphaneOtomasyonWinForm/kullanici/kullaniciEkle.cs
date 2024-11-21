@@ -55,6 +55,8 @@ namespace KutuphaneOtomasyonWinForm.kullanici
             kutuphaneOtomasyonuEntities db = new kutuphaneOtomasyonuEntities();
             var kullanicilar = db.kullanicilar.ToList();
             dataGridView1.DataSource = kullanicilar.ToList();
+            
+
 
             dataGridView1.Columns[8].Visible = false;
 
@@ -65,6 +67,7 @@ namespace KutuphaneOtomasyonWinForm.kullanici
             dataGridView1.Columns[5].HeaderText = "Kullanıcı E-mail";
             dataGridView1.Columns[6].HeaderText = "Ceza Tutarı (TL)";
             dataGridView1.Columns[7].HeaderText = "Kullanıcı Cinsiyet";
+
         }
         private void kullaniciEkle_Load(object sender, EventArgs e)
         {

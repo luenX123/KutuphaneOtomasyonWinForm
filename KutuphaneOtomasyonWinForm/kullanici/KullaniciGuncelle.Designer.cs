@@ -54,6 +54,7 @@
             this.kullaniciCezaTxt.Name = "kullaniciCezaTxt";
             this.kullaniciCezaTxt.Size = new System.Drawing.Size(154, 20);
             this.kullaniciCezaTxt.TabIndex = 32;
+            this.kullaniciCezaTxt.TextChanged += new System.EventHandler(this.kullaniciCezaTxt_TextChanged);
             // 
             // LblCeza
             // 

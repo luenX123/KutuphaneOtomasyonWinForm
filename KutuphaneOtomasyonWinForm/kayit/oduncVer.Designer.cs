@@ -38,6 +38,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.oduncVerSilBtn = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -92,7 +94,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(538, 238);
             this.dataGridView2.TabIndex = 5;
-            this.dataGridView2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseClick);
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // KitapBultTxt
             // 
@@ -129,12 +131,33 @@
             this.label4.Size = new System.Drawing.Size(0, 13);
             this.label4.TabIndex = 9;
             // 
+            // oduncVerSilBtn
+            // 
+            this.oduncVerSilBtn.Location = new System.Drawing.Point(84, 275);
+            this.oduncVerSilBtn.Name = "oduncVerSilBtn";
+            this.oduncVerSilBtn.Size = new System.Drawing.Size(110, 23);
+            this.oduncVerSilBtn.TabIndex = 10;
+            this.oduncVerSilBtn.Text = "SİL";
+            this.oduncVerSilBtn.UseVisualStyleBackColor = true;
+            this.oduncVerSilBtn.Click += new System.EventHandler(this.oduncVerSilBtn_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 280);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Kullanıcı Sil :";
+            // 
             // oduncVer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1137, 700);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.oduncVerSilBtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
@@ -167,5 +190,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button oduncVerSilBtn;
+        private System.Windows.Forms.Label label5;
     }
 }

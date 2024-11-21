@@ -30,5 +30,6 @@ namespace KutuphaneOtomasyonWinForm
         public virtual DbSet<kitaplarr> kitaplarr { get; set; }
         public virtual DbSet<kayitlar> kayitlar { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<MSchange_tracking_history> MSchange_tracking_history { get; set; }
     }
 }
