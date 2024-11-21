@@ -103,7 +103,6 @@ namespace KutuphaneOtomasyonWinForm
             kliste.Show();
         }
 
-        private void kitapEkleBtn_Click(object sender, EventArgs e)
         {
             kitaplarEkle kEkle = new kitaplarEkle();
             kEkle.MdiParent = this;
